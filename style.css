@@ -108,3 +108,9 @@ html,body{
     font-size: large;
     font-weight: 500;
 }
+
+@media (max-width:900px){
+    .input{
+        flex-direction: column;
+    }
+}
