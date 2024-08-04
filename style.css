@@ -114,6 +114,10 @@ html,body{
     .input{
         flex-direction: column;
     }
+    .msg .left{
+        display: flex;
+        gap: 0.8rem;
+    }
 }
 
 .msg .left{
