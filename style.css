@@ -87,7 +87,7 @@ html,body{
     align-items: center;
 }
 
-.msg>.check-icon{
+.msg .check-icon{
     height: 100%;
     width: fit-content;
     color: rgb(255, 77, 0);
@@ -95,7 +95,7 @@ html,body{
     cursor: pointer;
 }
 
-.msg>.cross-icon{
+.msg .cross-icon{
     height: 100%;
     width: fit-content;
     color: rgb(255, 77, 0);
@@ -103,8 +103,7 @@ html,body{
     cursor: pointer;
 }
 
-.msg>.msg-text{
-    color: rgb(255, 140, 0);
+.msg .msg-text{
     font-size: large;
     font-weight: 500;
 }
@@ -113,4 +112,9 @@ html,body{
     .input{
         flex-direction: column;
     }
+}
+
+.msg .left{
+    display: flex;
+    gap: 1.5rem;
 }

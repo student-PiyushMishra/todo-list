@@ -17,7 +17,7 @@ btn.addEventListener('click',function(){
 function List(){
     let clutter = ""
     array.forEach((item, index) => {
-        clutter += `<div class="msg"><div class="check-icon" data-index=${index} ><i class="ri-checkbox-blank-circle-line"></i></div><div class="msg-text">${item}</div><div class="cross-icon" data-index="${index}"><i class="ri-close-circle-fill"></i></div></div>`
+        clutter += `<div class="msg"><div class="left"><div class="check-icon" data-index=${index} ><i class="ri-checkbox-blank-circle-line"></i></div><div class="msg-text">${item}</div></div><div class="cross-icon" data-index="${index}"><i class="ri-close-circle-fill"></i></div></div>`
     })
     document.querySelector('.list').innerHTML = clutter;
     document.querySelectorAll('.check-icon').forEach(icon => {
@@ -28,10 +28,10 @@ function List(){
             let iconElement = this.querySelector('i');
             if (iconElement.classList.contains('ri-checkbox-blank-circle-line')) {
                 iconElement.classList.remove('ri-checkbox-blank-circle-line');
-                iconElement.classList.add('ri-checkbox-circle-line');
+                iconElement.classList.add('ri-checkbox-circle-fill');
                 msgTxt.style.textDecoration = 'line-through';
-            } else if (iconElement.classList.contains('ri-checkbox-circle-line')) {
-                iconElement.classList.remove('ri-checkbox-circle-line');
+            } else if (iconElement.classList.contains('ri-checkbox-circle-fill')) {
+                iconElement.classList.remove('ri-checkbox-circle-fill');
                 iconElement.classList.add('ri-checkbox-blank-circle-line');
                 msgTxt.style.textDecoration = 'none';
             }
